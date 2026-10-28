@@ -15,6 +15,7 @@ if (
 )
   throw new Error("SESSION_SECRET must be configured in production");
 const app = express();
+app.set("trust proxy", 1);
 app.get("/admin", (req, res) => {
   res.sendFile(require("path").join(__dirname, "../frontend/admin.html"));
 });
