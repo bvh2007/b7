@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trò chơi nhỏ · Sorry Bloom</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body data-page="game">
+    <div class="space-sky" id="spaceSky" aria-hidden="true"></div>
+    <header class="site-nav">
+      <a class="logo" href="/">✿ Sorry Bloom</a
+      ><a href="/welcome.html">Lời mở đầu</a
+      ><a href="/apology.html">Những điều muốn nói</a
+      ><a href="/memories.html">Những khoảnh khắc</a
+      ><a href="/game.html" aria-current="page">Trò chơi nhỏ</a
+      ><a href="/gift.html">Món quà đặc biệt</a
+      ><a href="/letter.html">Lá thư cuối</a
+      ><a href="/response.html">Phản hồi</a
+      ><button class="motion" type="button">Tắt chuyển động</button>
+    </header>
+    <div class="progress"><span style="width: 57.14%"></span></div>
+    <main class="page-main">
+      <span class="eyebrow">Chương 04 / 07</span>
+      <h1>Trò chơi nhỏ</h1>
+      <p>
+        Chạm vào những trái tim để ghi điểm. Bạn có thể bỏ qua trò chơi bất cứ
+        lúc nào.
+      </p>
+      <div class="page-card">
+        <p>
+          Điểm: <strong id="score">0</strong> · Thời gian:
+          <strong id="remaining">20</strong> giây
+        </p>
+        <button id="startGame">Bắt đầu</button>
+        <div class="game-area" id="gameArea"></div>
+        <p id="gameStatus" class="status"></p>
+      </div>
+      <div class="page-actions">
+        <a class="secondary" href="/memories.html">← Quay lại</a
+        ><a href="/gift.html">Tiếp tục →</a>
+      </div>
+    </main>
+    <script src="/js/pages.js" defer></script>
+  </body>
+</html>

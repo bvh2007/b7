@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Phản hồi · Sorry Bloom</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body data-page="response">
+    <div class="space-sky" id="spaceSky" aria-hidden="true"></div>
+    <header class="site-nav">
+      <a class="logo" href="/">✿ Sorry Bloom</a
+      ><a href="/welcome.html">Lời mở đầu</a
+      ><a href="/apology.html">Những điều muốn nói</a
+      ><a href="/memories.html">Những khoảnh khắc</a
+      ><a href="/game.html">Trò chơi nhỏ</a
+      ><a href="/gift.html">Món quà đặc biệt</a
+      ><a href="/letter.html">Lá thư cuối</a
+      ><a href="/response.html" aria-current="page">Phản hồi</a
+      ><button class="motion" type="button">Tắt chuyển động</button>
+    </header>
+    <div class="progress"><span style="width: 100%"></span></div>
+    <main class="page-main">
+      <span class="eyebrow">Chương 07 / 07</span>
+      <h1>Phản hồi</h1>
+      <div class="page-card">
+        <p>
+          Bạn có thể chia sẻ hoặc không phản hồi. Không có yêu cầu phải trả lời
+          ngay.
+        </p>
+        <form id="responseForm">
+          <label for="responseChoice">Lựa chọn (không bắt buộc)</label
+          ><select id="responseChoice">
+            <option value="">Không chọn</option>
+            <option value="read">Mình đã đọc</option>
+            <option value="time">Mình cần thêm thời gian</option></select
+          ><label for="responseText">Lời nhắn (không bắt buộc)</label
+          ><textarea
+            id="responseText"
+            maxlength="1000"
+            rows="5"
+            placeholder="Viết điều bạn muốn chia sẻ..."
+          ></textarea
+          ><button type="submit">Gửi phản hồi</button>
+          <p class="status" id="responseStatus" role="status"></p>
+        </form>
+      </div>
+      <div class="page-actions">
+        <a class="secondary" href="/letter.html">← Quay lại</a
+        ><a href="/">Về đầu</a>
+      </div>
+    </main>
+    <script src="/js/pages.js" defer></script>
+  </body>
+</html>

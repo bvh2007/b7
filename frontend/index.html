@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cánh cửa bí mật · Sorry Bloom</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+  </head>
+  <body data-page="gate">
+    <div class="space-sky" id="spaceSky"></div>
+    <main class="page-main" style="text-align: center">
+      <span class="eyebrow">A little secret</span>
+      <h1>Cánh cửa bí mật ✉</h1>
+      <button id="showGate" aria-controls="gateForm" aria-expanded="false">
+        Mở lá thư
+      </button>
+      <form class="page-card" id="gateForm" hidden>
+        <label for="gatePassword">Mật khẩu riêng</label
+        ><input
+          id="gatePassword"
+          type="password"
+          required
+          autocomplete="current-password"
+        /><button type="submit">Đăng nhập</button>
+        <p id="gateStatus" role="status"></p>
+      </form>
+    </main>
+    <script src="/js/pages.js" defer></script>
+  </body>
+</html>
