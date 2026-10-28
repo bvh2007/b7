@@ -179,21 +179,23 @@ app.get("/api/photos/:id/image", requireVisitor, async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     if (!Number.isInteger(id) || id < 1 || id > 5) return res.sendStatus(404);
-    const [rows] = await db.execute("SELECT public_id FROM photos WHERE id=?", [
-      id,
-    ]);
-    if (!rows[0]?.public_id) {
-      const file = path.join(
-        __dirname,
-        `../private-assets/gift/photo${id}.jpg`,
-      );
-      return res.sendFile(file, (err) => {
-        if (err && !res.headersSent) res.sendStatus(404);
-      });
+
+    const photoIds = {
+      1: "anh1",
+      2: "anh2",
+      3: "anh3",
+      4: "anh4",
+      5: "anh5",
+    };
+
+    const publicId = photoIds[id];
+
+    if (!publicId) {
+      return res.sendStatus(404);
     }
-    const url = cloudinary.url(rows[0].public_id, {
-      type: "authenticated",
-      sign_url: true,
+
+    const url = cloudinary.url(publicId, {
+      type: "upload",
       secure: true,
       resource_type: "image",
       transformation: [
@@ -206,6 +208,7 @@ app.get("/api/photos/:id/image", requireVisitor, async (req, res, next) => {
         },
       ],
     });
+
     const r = await fetch(url);
     if (!r.ok) return res.sendStatus(502);
     res.set("Cache-Control", "private, max-age=120");
